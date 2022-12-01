@@ -78,7 +78,7 @@ public class MyArrayList implements StringList {
 
     @Override
     public int lastIndexOf(String item) {
-        for (int i = size; i >= size; i--) {
+        for (int i = size - 1; i >= 0; i--) {
             if (storage[i].equals(item)) {
                 return i;
             }
@@ -99,7 +99,7 @@ public class MyArrayList implements StringList {
 
     @Override
     public int size() {
-        return 0;
+        return this.size;
     }
 
     @Override
