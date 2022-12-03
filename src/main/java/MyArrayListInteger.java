@@ -104,6 +104,27 @@ public class MyArrayListInteger {
         return Arrays.copyOf(storage, size);
     }
 
+    public boolean containsBinary(Integer element) {
+        sortInsertion(storage);
+        int min = 0;
+        int max = storage.length - 1;
+
+        while (min <= max) {
+            int mid = (min + max) / 2;
+
+            if (element == storage[mid]) {
+                return true;
+            }
+
+            if (element < storage[mid]) {
+                max = mid - 1;
+            } else {
+                min = mid + 1;
+            }
+        }
+        return false;
+    }
+
     private void validateItem(Integer item) {
         if (item == null) {
             throw new NullItemException();
@@ -119,6 +140,24 @@ public class MyArrayListInteger {
     private void validateSize() {
         if (size == storage.length) {
             throw new StorageIsFullException();
+        }
+    }
+
+    private static void swapElements(int[] arr, int indexA, int indexB) {
+        int tmp = arr[indexA];
+        arr[indexA] = arr[indexB];
+        arr[indexB] = tmp;
+    }
+
+    private static void sortInsertion(Integer[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int temp = arr[i];
+            int j = i;
+            while (j > 0 && arr[j - 1] >= temp) {
+                arr[j] = arr[j - 1];
+                j--;
+            }
+            arr[j] = temp;
         }
     }
 }

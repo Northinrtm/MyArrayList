@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e00f323e-642c-414b-9196-ec57ca5a2878" name="Changes" comment="c тестов">
-      <change afterPath="$PROJECT_DIR$/src/main/java/MyArrayListInteger.java" afterDir="false" />
+    <list default="true" id="e00f323e-642c-414b-9196-ec57ca5a2878" name="Changes" comment="Integer">
+      <change afterPath="$PROJECT_DIR$/src/main/java/SortTime.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/MyArrayListIntegerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MyArrayListInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MyArrayListInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MyArrayListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MyArrayListTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,15 +21,15 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="hm" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -73,7 +77,17 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MyArrayListTest">
+  <component name="RunManager" selected="JUnit.MyArrayListIntegerTest.containsBinary">
+    <configuration name="MyArrayListIntegerTest.containsBinary" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="MyArrayList" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="MyArrayListIntegerTest" />
+      <option name="METHOD_NAME" value="containsBinary" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MyArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="MyArrayList" />
       <option name="PACKAGE_NAME" value="" />
@@ -88,16 +102,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="MyArrayListTest" />
       <option name="METHOD_NAME" value="addItem" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MyArrayListTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="MyArrayList" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="MyArrayListTest" />
-      <option name="METHOD_NAME" value="get" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -125,11 +129,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MyArrayListIntegerTest.containsBinary" />
         <item itemvalue="JUnit.MyArrayListTest" />
         <item itemvalue="JUnit.MyArrayListTest.isEmpty" />
         <item itemvalue="JUnit.MyArrayListTest.size" />
         <item itemvalue="JUnit.MyArrayListTest.addItem" />
-        <item itemvalue="JUnit.MyArrayListTest.get" />
       </list>
     </recent_temporary>
   </component>
@@ -144,6 +148,9 @@
       <workItem from="1669841394063" duration="7033000" />
       <workItem from="1669894974431" duration="6324000" />
       <workItem from="1670076329328" duration="387000" />
+      <workItem from="1670076753737" duration="4531000" />
+      <workItem from="1670086044075" duration="930000" />
+      <workItem from="1670086996373" duration="1633000" />
     </task>
     <task id="LOCAL-00001" summary="без тестов">
       <created>1669895058877</created>
@@ -159,7 +166,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669901870198</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Integer">
+      <created>1670083043020</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1670083043020</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -168,6 +182,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="без тестов" />
     <MESSAGE value="c тестов" />
-    <option name="LAST_COMMIT_MESSAGE" value="c тестов" />
+    <MESSAGE value="Integer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Integer" />
   </component>
 </project>
