@@ -57,7 +57,9 @@ public class MyArrayListInteger {
     }
 
     public boolean contains(Integer item) {
-        return indexOf(item) != -1;
+        Integer[] storageCopy = toArray();
+        sortInsertion(storageCopy);
+        return containsBinary(storageCopy, item);
     }
 
     public int indexOf(Integer item) {
@@ -104,19 +106,18 @@ public class MyArrayListInteger {
         return Arrays.copyOf(storage, size);
     }
 
-    public boolean containsBinary(Integer element) {
-        sortInsertion(storage);
+    public boolean containsBinary(Integer[] arr, Integer item) {
         int min = 0;
         int max = storage.length - 1;
 
         while (min <= max) {
             int mid = (min + max) / 2;
 
-            if (element == storage[mid]) {
+            if (item == storage[mid]) {
                 return true;
             }
 
-            if (element < storage[mid]) {
+            if (item < storage[mid]) {
                 max = mid - 1;
             } else {
                 min = mid + 1;
@@ -149,7 +150,7 @@ public class MyArrayListInteger {
         arr[indexB] = tmp;
     }
 
-    private static void sortInsertion(Integer[] arr) {
+    private void sortInsertion(Integer[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int temp = arr[i];
             int j = i;

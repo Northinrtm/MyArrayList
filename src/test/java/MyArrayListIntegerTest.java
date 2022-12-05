@@ -14,7 +14,6 @@ class MyArrayListIntegerTest {
         out.add(4);
         out.add(6);
         out.add(7);
-        assertTrue(out.containsBinary(4));
-
+        assertTrue(out.contains(4));
     }
 }
