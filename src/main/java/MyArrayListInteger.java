@@ -1,7 +1,7 @@
 import java.util.Arrays;
 
 public class MyArrayListInteger {
-    private final Integer[] storage;
+    private Integer[] storage;
     private int size;
 
     public MyArrayListInteger() {
@@ -13,14 +13,14 @@ public class MyArrayListInteger {
     }
 
     public Integer add(Integer item) {
-        validateSize();
+        growIfNeed();
         validateItem(item);
         storage[size++] = item;
         return item;
     }
 
     public Integer add(int index, Integer item) {
-        validateSize();
+        growIfNeed();
         validateIndex(index);
         validateItem(item);
         if (index == size) {
@@ -138,16 +138,16 @@ public class MyArrayListInteger {
         }
     }
 
-    private void validateSize() {
+    private void growIfNeed() {
         if (size == storage.length) {
-            throw new StorageIsFullException();
+            grow();
         }
     }
 
-    private static void swapElements(int[] arr, int indexA, int indexB) {
-        int tmp = arr[indexA];
-        arr[indexA] = arr[indexB];
-        arr[indexB] = tmp;
+    private static void swapElements(Integer[] arr, int i1, int i2) {
+        int temp = arr[i1];
+        arr[i1] = arr[i2];
+        arr[i2] = temp;
     }
 
     private void sortInsertion(Integer[] arr) {
@@ -160,5 +160,34 @@ public class MyArrayListInteger {
             }
             arr[j] = temp;
         }
+    }
+
+    public static void quickSort(Integer[] arr, int begin, int end) {
+        if (begin < end) {
+            int partitionIndex = partition(arr, begin, end);
+
+            quickSort(arr, begin, partitionIndex - 1);
+            quickSort(arr, partitionIndex + 1, end);
+        }
+    }
+
+    private static int partition(Integer[] arr, int begin, int end) {
+        int pivot = arr[end];
+        int i = (begin - 1);
+
+        for (int j = begin; j < end; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+
+                swapElements(arr, i, j);
+            }
+        }
+
+        swapElements(arr, i + 1, end);
+        return i + 1;
+    }
+
+    private void grow() {
+        storage = Arrays.copyOf(storage, size + size / 2);
     }
 }
